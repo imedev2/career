@@ -1,0 +1,17 @@
+{
+    "name": "imedev2/career",
+    "description": "DEMO for career",
+    "authors": [
+        {
+            "name": "imedev2",
+            "email": "fatima@5w2h.biz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Fatima\\Career\\": "src/"
+        }
+    }
+}
