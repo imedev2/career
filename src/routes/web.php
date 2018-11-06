@@ -6,6 +6,8 @@
  * Time: 11:28 AM
  */
 
+use Imedev2\Career\Models\Company;
+
 Route::get('contact', function(){
-    return 'Hello from the contact form package';
+    return Company::all();
 });

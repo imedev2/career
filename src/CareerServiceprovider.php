@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatima\Career;
+namespace Imedev2\Career;
 
 use Illuminate\Support\ServiceProvider;
 

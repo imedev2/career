@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatima\Career\Models;
+namespace Imedev2\Career\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
