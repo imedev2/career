@@ -18,8 +18,15 @@ class CreateJobReqsTable extends Migration
             $table->integer('job_id')->unsigned()->index()->nullable();
             $table->string('name');
             $table->string('message');
+            $table->string('email');
             $table->string('filename');
+            $table->boolean('review')->default(false);
+            $table->integer('order')->unsigned();
             $table->timestamps();
+
+
+
+            $table->foreign('job_id')->references('id')->on('jobs');
         });
     }
 

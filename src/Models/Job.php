@@ -7,7 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Job extends Model
 {
     protected $table = 'jobs';
-    protected $fillable = ['company_id','title','description'];
+    protected $fillable = ['company_id',
+        'title',
+        'arabic_title',
+        'description',
+        'arabic_description',
+        'no_req',
+        'order',
+        'visible'];
 
 
     public function jobreqs()

@@ -16,9 +16,17 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('company_id')->unsigned()->index()->nullable();
+            $table->integer('order')->unsigned();
             $table->string('title');
+            $table->string('arabic_title');
             $table->longText('description');
+            $table->longText('arabic_description');
+            $table->integer('no_req');
+            $table->boolean('visible')->default(true);
             $table->timestamps();
+
+
+            $table->foreign('company_id')->references('id')->on('companies');
         });
     }
 
