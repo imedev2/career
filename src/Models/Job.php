@@ -27,4 +27,14 @@ class Job extends Model
     {
         return $this->belongsTo('Imedev2/Career/Models/Company','company_id');
     }
+
+
+    protected static function boot() {
+        parent::boot();
+
+        static::deleting(function($job) {
+            $job->jobreqs()->delete();
+
+        });
+    }
 }
