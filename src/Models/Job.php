@@ -30,11 +30,10 @@ class Job extends Model
 
 
     protected static function boot() {
-        parent::boot();
-
         static::deleting(function($job) {
-            $job->jobreqs()->delete();
-
+            foreach ($job->jobreqs as $jobreq) {
+                $jobreq->delete();
+            }
         });
     }
 }
