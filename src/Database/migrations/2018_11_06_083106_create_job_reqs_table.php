@@ -26,7 +26,7 @@ class CreateJobReqsTable extends Migration
 
 
 
-            $table->foreign('job_id')->references('id')->on('jobs');
+            $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');;
         });
     }
 
