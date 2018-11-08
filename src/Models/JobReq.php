@@ -19,6 +19,6 @@ class JobReq extends Model
 
     public function job()
     {
-        return $this->belongsTo('Imedev2/Career/Models/Job','job_id');
+        return $this->belongsTo('Imedev2\Career\Models\Job','job_id');
     }
 }

@@ -19,13 +19,13 @@ class Job extends Model
 
     public function jobreqs()
     {
-        return $this->hasMany('Imedev2/Career/Models/JobReq');
+        return $this->hasMany('Imedev2\Career\Models\JobReq');
     }
 
 
     public function company()
     {
-        return $this->belongsTo('Imedev2/Career/Models/Company','company_id');
+        return $this->belongsTo('Imedev2\Career\Models\Company','company_id');
     }
 
 }
