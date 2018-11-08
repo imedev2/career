@@ -19,7 +19,6 @@ class CreateJobReqsTable extends Migration
             $table->string('name');
             $table->string('message');
             $table->string('email');
-            $table->string('filename');
             $table->boolean('review')->default(false);
             $table->integer('order')->unsigned();
             $table->timestamps();

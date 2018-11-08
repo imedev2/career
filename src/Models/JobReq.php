@@ -11,7 +11,6 @@ class JobReq extends Model
         'job_id',
         'name',
         'message',
-        'filename',
         'order',
         'review',
         'email'];
@@ -21,4 +20,6 @@ class JobReq extends Model
     {
         return $this->belongsTo('Imedev2\Career\Models\Job','job_id');
     }
+
+
 }
