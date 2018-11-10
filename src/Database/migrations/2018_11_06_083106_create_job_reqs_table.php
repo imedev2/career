@@ -17,7 +17,7 @@ class CreateJobReqsTable extends Migration
             $table->increments('id');
             $table->integer('job_id')->unsigned()->index()->nullable();
             $table->string('name');
-            $table->string('message');
+            $table->string('message')->nullable();
             $table->string('email');
             $table->boolean('review')->default(false);
             $table->integer('order')->unsigned();
