@@ -21,5 +21,8 @@ class JobReq extends Model
         return $this->belongsTo('Imedev2\Career\Models\Job','job_id');
     }
 
-
+    public function file()
+    {
+        return $this->hasOne('Imedev2\Career\Models\File');
+    }
 }

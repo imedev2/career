@@ -6,5 +6,4 @@
  * Time: 11:28 AM
  */
 
-use Imedev2\Career\Models\Company;
 
