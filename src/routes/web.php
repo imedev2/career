@@ -8,6 +8,3 @@
 
 use Imedev2\Career\Models\Company;
 
-Route::get('contact', function(){
-    return Company::all();
-});
