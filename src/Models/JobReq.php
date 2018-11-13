@@ -23,6 +23,6 @@ class JobReq extends Model
 
     public function file()
     {
-        return $this->hasOne('Imedev2\Career\Models\File');
+        return $this->hasOne('Imedev2\Career\Models\File','jobReq_id');
     }
 }
