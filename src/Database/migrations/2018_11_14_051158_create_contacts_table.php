@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJobReqsTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,12 @@ class CreateJobReqsTable extends Migration
      */
     public function up()
     {
-        Schema::create('job_reqs', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('job_id')->unsigned()->index()->nullable();
             $table->string('name');
-            $table->longText('message')->nullable();
             $table->string('email');
-            $table->boolean('review')->default(false);
-            $table->integer('order')->unsigned();
+            $table->longText('message');
             $table->timestamps();
-
-
-
-            $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');;
         });
     }
 
@@ -36,6 +29,6 @@ class CreateJobReqsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('job_reqs');
+        Schema::dropIfExists('contacts');
     }
 }
