@@ -13,7 +13,8 @@ class JobReq extends Model
         'message',
         'order',
         'review',
-        'email'];
+        'email'
+    ];
 
 
     public function job()

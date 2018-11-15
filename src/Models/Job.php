@@ -14,7 +14,9 @@ class Job extends Model
         'arabic_description',
         'no_req',
         'order',
-        'visible'];
+        'visible',
+        'up_date'
+    ];
 
 
     public function jobreqs()

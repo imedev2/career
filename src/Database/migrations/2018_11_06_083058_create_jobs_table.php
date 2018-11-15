@@ -23,6 +23,7 @@ class CreateJobsTable extends Migration
             $table->longText('arabic_description');
             $table->integer('no_req');
             $table->boolean('visible')->default(true);
+            $table->date('up_date');
             $table->timestamps();
 
 
