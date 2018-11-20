@@ -15,7 +15,21 @@ class JobReq extends Model
         'review',
         'email'
     ];
+    protected $appends = ['new_jobreq_id'];
 
+
+
+    public function getNewJobReqIdAttribute()
+    {
+        if ($this->job->company_id == 1)
+        {
+            return sprintf("FFKR001-%03d", $this->id);
+        }
+        if ($this->job->company_id == 2)
+        {
+            return sprintf("IMER002-%03d", $this->id);
+        }
+    }
 
     public function job()
     {

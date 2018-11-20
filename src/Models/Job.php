@@ -18,6 +18,21 @@ class Job extends Model
         'up_date'
     ];
 
+    protected $appends = ['new_job_id'];
+
+
+
+    public function getNewJobIdAttribute()
+    {
+        if ($this->company_id == 1)
+        {
+            return sprintf("FFK001-%03d", $this->id);
+        }
+        if ($this->company_id == 2)
+        {
+            return sprintf("IME002-%03d", $this->id);
+        }
+    }
 
     public function jobreqs()
     {
