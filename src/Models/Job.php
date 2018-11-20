@@ -2,10 +2,32 @@
 
 namespace Imedev2\Career\Models;
 
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Database\Eloquent\Model;
+
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 class Job extends Model
 {
+
+    use Sluggable;
+    use SluggableScopeHelpers;
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'rand_url',
+                'onUpdate'  => true,
+            ]
+        ];
+    }
+
     protected $table = 'jobs';
     protected $fillable = ['company_id',
         'title',
@@ -15,7 +37,9 @@ class Job extends Model
         'no_req',
         'order',
         'visible',
-        'up_date'
+        'up_date',
+        'slug',
+        'rand_url'
     ];
 
     protected $appends = ['new_job_id'];
