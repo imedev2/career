@@ -24,7 +24,7 @@ class CreateJobsTable extends Migration
             $table->integer('no_req');
             $table->boolean('visible')->default(true);
             $table->date('up_date')->nullable();
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->string('rand_url')->unique();
             $table->timestamps();
 

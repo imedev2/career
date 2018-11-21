@@ -3,9 +3,25 @@
 namespace Imedev2\Career\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 class JobReq extends Model
 {
+    use Sluggable;
+    use SluggableScopeHelpers;
+
+
+public function sluggable()
+{
+    return [
+        'slug' => [
+            'source' => 'rand_url',
+            'onUpdate'  => true,
+        ]
+    ];
+}
+
+
     protected $table = 'job_reqs';
     protected $fillable = [
         'job_id',
@@ -13,7 +29,9 @@ class JobReq extends Model
         'message',
         'order',
         'review',
-        'email'
+        'email',
+        'slug',
+        'rand_url'
     ];
     protected $appends = ['new_jobreq_id'];
 

@@ -22,6 +22,8 @@ class CreateJobReqsTable extends Migration
             $table->boolean('review')->default(false);
             $table->integer('order')->unsigned();
             $table->timestamps();
+            $table->string('slug')->unique();
+            $table->string('rand_url')->unique();
 
 
 
