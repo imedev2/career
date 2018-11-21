@@ -43,7 +43,7 @@ class Job extends Model
     ];
 
     protected $appends = ['new_job_id'];
-
+    protected $dates = ['up_date'];
 
 
     public function getNewJobIdAttribute()
